@@ -1,0 +1,72 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	height: 100vh;
+}
+.container{
+	display: flex;
+	position: relative;
+	width: 100vw !important;
+	overflow-x: hidden;
+}
+.sidemenu{
+	display: inline-flex;
+	flex-direction: column;
+	min-width: 200px !important;
+	height: calc(100vh - 80px);
+	padding: 40px 20px 40px 20px;
+	background-color: #999;
+}
+.sidemenu>button{
+	margin-bottom: 2rem;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	padding: 1rem;
+	cursor: pointer;
+	color: #999;
+	font-weight: 500;
+	border-radius: 1rem;
+	transition: all .3s ease;
+}
+.sidemenu>button:hover, .sidemenu>button.active{
+	color: #333;
+	font-weight: 700;
+}
+.content{
+	display: inline-flex;
+	min-width: calc(100vw - 240px);
+	height: 100vh;
+	position: absolute;
+	transition: all 1s ease-out;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.content.open{
+	left: 240px !important;
+	opacity: 1;
+	z-index: 3;
+}
+.content.closed{
+	left: 100% !important;
+	opacity: .3;
+	z-index: 1;
+}
+#content-home{
+	background-color: rgb(74, 187, 89);
+}
+#content-about{
+	background-color: rgb(47, 141, 230);
+}
+#content-portfolio{
+	background-color: rgb(111, 47, 212);
+}
+#content-contact{
+	background-color: rgb(206, 150, 31);
+}
+.inside-content{
+	margin: 6rem;
+	text-align: center;
+}
